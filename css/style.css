@@ -1,0 +1,256 @@
+/* All Sections */
+
+@font-face {
+    font-family: 'socicon';
+    src: url('../font/socicon-webfont.eot');
+    src: url('../font/socicon-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/socicon-webfont.woff') format('woff'),
+         url('../font/socicon-webfont.woff2') format('woff2'),
+         url('../font/socicon-webfont.ttf') format('truetype'),
+         url('../font/socicon-webfont.svg#sociconregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    text-transform: initial;
+}
+
+.socicon {
+    font-family: 'socicon' !important;
+}
+
+  /* Without this, margins will push outside sections */
+section {
+  padding: 0.1px;
+}
+
+/* Main Section */
+
+#main {
+  height: 100vh;
+  width: 100vw;
+  background: url(../img/background_small.jpg) no-repeat center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+@media (min-width:720px) {
+  #main {
+    background: url(../img/background_medium.jpg) no-repeat center center;
+  }
+}
+
+@media (min-width:1080px) {
+  #main {
+    background: url(../img/background_large.jpg) no-repeat center center;
+  }
+}
+
+@media (min-width:2673px) {
+  #main {
+    background: url(../img/background_full.jpg) no-repeat center center;
+  }
+}
+
+#main-content {
+  text-align: center;
+  font-family: "Raleway";
+  background-color: rgba(52,73,94, 0.6);
+  color: #ecf0f1;
+  width: 250px;
+  padding: 10px 25px;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  border: 0px solid #000000;
+}
+
+#main-content p {
+  font-size: 1.1em;
+  font-weight: 100;
+}
+
+nav {
+  position: absolute;
+  top: 75%;
+  display: block;
+  width: 100%;
+  background-color: #2980b9;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul {
+  margin: 0px;
+}
+
+nav li {
+  display: inline;
+}
+
+nav a {
+  display: inline-block;
+  position: relative;
+  color: #ecf0f1;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-size: 16pt;
+  height: 100%;
+  font-family: "Raleway";
+
+  border-color: transparent;
+  border-style: solid;
+  border-width: 1px 0px 1px 0px;
+
+  position: relative;
+  transition: border-color 0.5s ease;
+}
+
+nav a:hover {
+  color: #ecf0f1;
+  border-color: #ecf0f1;
+}
+
+/* About Section */
+
+#about {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+}
+
+#about h1 {
+  padding-left: 25px;
+  font-family: "Raleway";
+}
+
+#about p.label {
+  padding-left: 50px;
+  font-weight: bold;
+  font-family: "Raleway";
+}
+
+#about p {
+  padding-right: 25px;
+  padding-left: 15px;
+  font-family: "Raleway";
+}
+
+/* Resume Section */
+
+#resume {
+  background-color: #ecf0f1;
+  color: #2c3e50;
+  padding-top: 20px;
+  padding-bottom: 60px;
+}
+
+#resume h3 {
+  font-family: "Raleway";
+}
+
+#resume div {
+  text-align: center;
+}
+
+#resume a {
+  height: 100%;
+}
+
+#resume img {
+  width: 256px;
+  height: 256px;
+  margin: 0px auto;
+  background-color: #2980b9;
+  border-radius: 10px 10px 10px 10px;
+  -moz-border-radius: 10px 10px 10px 10px;
+  -webkit-border-radius: 10px 10px 10px 10px;
+  z-index: 2;
+
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: all 0.5s ease 0s
+}
+
+#resume .img-hidden {
+  position: absolute;
+  margin-left: -256px;
+  z-index: 1;
+  opacity: 0;
+}
+
+#resume img:hover {
+  background-color: #2c3e50;
+  z-index: 1;
+}
+
+#resume .img-hidden:hover {
+  opacity: 1;
+  background-color: #2c3e50;
+  z-index: 2;
+
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: all 0.5s ease 0s
+}
+
+/* Contact Section */
+
+#contact {
+  background-color: #2980b9;
+  color: #ecf0f1;
+  padding: 0px;
+  padding-top: 50px;
+}
+
+#contact .socicon {
+  font-size: 96px;
+  width: 180px;
+  height: 180px;
+  margin: auto auto;
+  text-align: center;
+  line-height: 180px;
+
+  border-radius: 90px 90px 90px 90px;
+  -moz-border-radius: 90px 90px 90px 90px;
+  -webkit-border-radius: 90px 90px 90px 90px;
+  border: 3px solid #ecf0f1;
+  margin-bottom: 50px;
+
+  -moz-transition: 0.5s ease;
+  -ms-transition: 0.5s ease;
+  -o-transition: 0.5s ease;
+  transition: all 0.5s ease 0s
+}
+
+#contact .socicon:hover {
+  border-style: dotted;
+  -webkit-transform: rotate(360deg);
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+
+#contact a {
+  text-decoration: none;
+  color: #ecf0f1;
+}
+
+#contact a:visited {
+  color: #ecf0f1;
+}
+
+/* IE10+ CSS styles go here */
+
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  #resume .img-hidden {
+    margin-left: -260px;
+  }
+}
