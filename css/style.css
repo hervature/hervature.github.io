@@ -27,7 +27,10 @@ section {
 #main {
   height: 100vh;
   width: 100vw;
-  background: url(../img/background_small.jpg) no-repeat center center;
+  background: url(../img/background_small.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -36,19 +39,40 @@ section {
 
 @media (min-width:720px) {
   #main {
-    background: url(../img/background_medium.jpg) no-repeat center center;
+    background: url(../img/background_medium.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
 @media (min-width:1080px) {
   #main {
-    background: url(../img/background_large.jpg) no-repeat center center;
+    background-image: url(../img/background_large.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
 @media (min-width:2673px) {
   #main {
-    background: url(../img/background_full.jpg) no-repeat center center;
+    background: url(../img/background_full.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 }
 
