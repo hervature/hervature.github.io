@@ -142,7 +142,7 @@ nav a:hover {
   border-color: #ecf0f1;
 }
 
-nav a:active {
+html.non-touch nav a:hover {
   border-color: transparent;
 }
 
