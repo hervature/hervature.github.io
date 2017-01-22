@@ -249,16 +249,16 @@ html.non-touch nav a:hover {
 /* Change icons by screen size */
 
 #contact .socicon {
-  font-size: 48px;
-  width: 90px;
-  height: 90px;
+  font-size: 38px;
+  width: 70px;
+  height: 70px;
   margin: auto auto;
   text-align: center;
-  line-height: 90px;
+  line-height: 70px;
 
-  border-radius: 45px 45px 45px 45px;
-  -moz-border-radius: 45px 45px 45px 45px;
-  -webkit-border-radius: 45px 45px 45px 45px;
+  border-radius: 38px 38px 38px 38px;
+  -moz-border-radius: 38px 38px 38px 38px;
+  -webkit-border-radius: 38px 38px 38px 38px;
   border: 3px solid #ecf0f1;
 
   -moz-transition: 0.5s ease;
@@ -276,9 +276,9 @@ html.non-touch nav a:hover {
     text-align: center;
     line-height: 160px;
 
-    border-radius: 80px 80px 80px 80px;
-    -moz-border-radius: 80px 80px 80px 80px;
-    -webkit-border-radius: 80px 80px 80px 80px;
+    border-radius: 84px 84px 84px 84px;
+    -moz-border-radius: 84px 84px 84px 84px;
+    -webkit-border-radius: 84px 84px 84px 84px;
     border: 3px solid #ecf0f1;
 
     -moz-transition: 0.5s ease;
