@@ -23,6 +23,13 @@ section {
   padding: 0.1px;
 }
 
+/* Alter Pure CSS */
+
+.pure-g {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 /* Main Section */
 
 #main {
@@ -155,6 +162,7 @@ html.non-touch nav a:hover {
 
 #about h1 {
   padding-left: 25px;
+  text-align: center;
   font-family: "Raleway";
 }
 
@@ -235,28 +243,49 @@ html.non-touch nav a:hover {
 #contact {
   background-color: #2980b9;
   color: #ecf0f1;
-  padding: 0px;
-  padding-top: 50px;
+  padding: 50px 0;
 }
 
+/* Change icons by screen size */
+
 #contact .socicon {
-  font-size: 96px;
-  width: 180px;
-  height: 180px;
+  font-size: 48px;
+  width: 90px;
+  height: 90px;
   margin: auto auto;
   text-align: center;
-  line-height: 180px;
+  line-height: 90px;
 
-  border-radius: 90px 90px 90px 90px;
-  -moz-border-radius: 90px 90px 90px 90px;
-  -webkit-border-radius: 90px 90px 90px 90px;
+  border-radius: 45px 45px 45px 45px;
+  -moz-border-radius: 45px 45px 45px 45px;
+  -webkit-border-radius: 45px 45px 45px 45px;
   border: 3px solid #ecf0f1;
-  margin-bottom: 50px;
 
   -moz-transition: 0.5s ease;
   -ms-transition: 0.5s ease;
   -o-transition: 0.5s ease;
   transition: all 0.5s ease 0s
+}
+
+@media (min-width:720px) {
+  #contact .socicon {
+    font-size: 84px;
+    width: 160px;
+    height: 160px;
+    margin: auto auto;
+    text-align: center;
+    line-height: 160px;
+
+    border-radius: 80px 80px 80px 80px;
+    -moz-border-radius: 80px 80px 80px 80px;
+    -webkit-border-radius: 80px 80px 80px 80px;
+    border: 3px solid #ecf0f1;
+
+    -moz-transition: 0.5s ease;
+    -ms-transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    transition: all 0.5s ease 0s
+  }
 }
 
 #contact .socicon:hover {
