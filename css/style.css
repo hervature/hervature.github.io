@@ -137,13 +137,13 @@ nav a {
   transition: border-color 0.5s ease;
 }
 
-/* Only let hover for those that support true hover */
+nav a:hover {
+  color: #ecf0f1;
+  border-color: #ecf0f1;
+}
 
-@media (hover: hover) {
-   nav a:hover {
-    color: #ecf0f1;
-    border-color: #ecf0f1;
-  }
+nav a:active {
+  border-color: transparent;
 }
 
 /* About Section */
