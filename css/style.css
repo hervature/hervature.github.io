@@ -17,7 +17,8 @@
     font-family: 'socicon' !important;
 }
 
-  /* Without this, margins will push outside sections */
+/* Without this, margins will push outside sections */
+
 section {
   padding: 0.1px;
 }
@@ -139,6 +140,10 @@ nav a {
 nav a:hover {
   color: #ecf0f1;
   border-color: #ecf0f1;
+}
+
+nav a:active {
+  border-color: #2980b9;
 }
 
 /* About Section */
