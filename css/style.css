@@ -166,6 +166,10 @@ html.non-touch nav a:hover {
   font-family: "Raleway";
 }
 
+#about h2 {
+  font-family: "Raleway";
+}
+
 #about p.label {
   padding-left: 50px;
   font-weight: bold;
