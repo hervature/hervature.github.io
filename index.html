@@ -87,7 +87,7 @@
     <section id="contact">
       <div class="pure-g">
         <div class="pure-u-1-4">
-          <div class="socicon"><a href="https://github.com/Hervature" target="_blank">Q</a></div>
+          <div class="socicon"><a href="https://github.com/hervature" target="_blank">Q</a></div>
         </div>
 
         <div class="pure-u-1-4">
@@ -108,8 +108,8 @@
   <script src="js/smooth-scroll.min.js"></script>
   <script> smoothScroll.init(); </script>
   <script>
-    var touchsupport = ('ontouchstart' in windows) || (navigator.maxTouchPoints > 0) || (navigator.msMaxTouchPoints > 0);
-    if (!touchsupport) {
+    var touch_capable = 'ontouchstart' in window || window.DocumentTouch && document instanceof window.DocumentTouch || navigator.maxTouchPoints > 0 || window.navigator.msMaxTouchPoints > 0;
+    if (!touch_capable) {
       document.documentElement.className += " non-touch";
     }
   </script>
