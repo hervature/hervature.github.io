@@ -1,0 +1,159 @@
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(./fonts/Lato-Light-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Lato Light'), local('Lato-Light'), url(./fonts/Lato-Light.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(./fonts/Lato-Regular-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Lato Regular'), local('Lato-Regular'), url(./fonts/Lato-Regular.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(./fonts/Raleway-latin-ext.woff2) format('woff2');
+  unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Raleway'), local('Raleway-Regular'), url(./fonts/Raleway.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  margin: 0;
+  padding: 0.5em 0;
+  font-family: Raleway;
+  font-size: 40pt;
+  text-align: center;
+  background-color: #d9d9d9;
+  border-bottom: 0.5em solid #7F7F7F;
+}
+
+h2 {
+  color: #555555;
+}
+
+#left-bar {
+  box-sizing: border-box;
+  padding: 0.5em 1.5em;
+  font-family: Lato;
+  font-size: 14pt;
+  font-weight: 300;
+  color: #7F7F7F;
+  background-color: #d9d9d9;
+  border-right: 1.5em solid #7F7F7F;
+  width: 40%;
+  float: left;
+  min-height: 100vh;
+}
+
+#left-bar > div {
+  margin-bottom: 1.5em;
+}
+
+#left-bar ul {
+  padding: 0 1em;
+}
+
+#left-bar ul li {
+  font-size: 10pt;
+  margin-bottom: 0.25em;
+}
+
+#left-bar ul li span {
+  font-size: 14pt;
+}
+
+#right-bar {
+  float: left;
+  padding: 0.5em 1.5em;
+  box-sizing: border-box;
+  padding: 0.5em 1.5em;
+  font-family: Lato;
+  font-size: 14pt;
+  font-weight: 300;
+  color: #7F7F7F;
+  width: 60%;
+}
+
+#right-bar ul {
+  margin: 0;
+}
+
+#right-bar ul.dashed {
+  list-style-type: none;
+}
+
+#right-bar ul.dashed > li {
+  text-indent: -15px;
+  margin-bottom: 0.25em;
+}
+
+#right-bar ul.dashed > li:before {
+  content: "—";
+  text-indent: -15px;
+}
+
+b {
+  font-weight: 400;
+}
+
+.bold {
+  font-weight: 600;
+}
+
+.left-align {
+  text-align: left;
+}
+
+.center-align {
+  text-align: center;
+}
+
+.justify {
+  text-align: justify;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-right {
+  float: right;
+}
+
+.clearfix {
+  clear: both;
+}
