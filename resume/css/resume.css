@@ -138,6 +138,8 @@ h2 {
 
 #right-bar ul.dashed {
   list-style-type: none;
+  width: 85%;
+  text-align: justify;
 }
 
 #right-bar ul.dashed > li {
