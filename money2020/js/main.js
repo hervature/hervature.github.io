@@ -61,6 +61,16 @@ function make_categories() {
 
 }
 
+function get_category_icon(category) {
+	if (category === "Beers") {
+		return "🍺";
+	} else if (category === "Cocktails") {
+		return "🍸";
+	} else {
+		return "🍷";
+	}
+}
+
 function make_items(category_id) {
 
 	url = "https://apisandbox.dev.clover.com/v3/merchants/" + merchant_id + "/categories/" + category_id + "/items?access_token=" + access_token;
@@ -96,7 +106,7 @@ function make_items(category_id) {
 				);
 			}
 
-			$( "#category-" + category_id ).append(      	
+			$( "#category-" + category_id ).append(
 			      	'</div>\
 			     </div>'
 			);
@@ -194,13 +204,13 @@ function process_payment() {
 			url = "https://apisandbox.dev.clover.com/v2/merchant/" + merchant_id + "/pay/key?access_token=" + access_token;
 
 	    	payload = {
-				"orderId": order.id, 
-				"taxAmount": 0, 
-				"expMonth": 12, 
-				"cvv": "111", 
-				"amount": amount*100, 
+				"orderId": order.id,
+				"taxAmount": 0,
+				"expMonth": 12,
+				"cvv": "111",
+				"amount": amount*100,
 				"expYear": 2018,
-				"cardNumber": "4761739001010010", 
+				"cardNumber": "4761739001010010",
 			};
 
 	    	$.ajax({
@@ -214,7 +224,7 @@ function process_payment() {
 		        }
 		    }).done( function() {
 		    	url = "https://bluwave.herokuapp.com/api/orders/generate_card_encryption?prefix=" + prefix + "&card=" + payload.cardNumber + "&exponent=" + exponent + "&modulus=" + modulus
-		    
+
 		    	$.ajax({
 			        url: url,
 			        type: 'GET',
@@ -227,10 +237,10 @@ function process_payment() {
 	    			payload = {
 					    "orderId": order.id,
 					    "currency": "usd",
-					    "taxAmount": 0, 
-						"expMonth": 12, 
-						"cvv": "111", 
-						"amount": amount*100, 
+					    "taxAmount": 0,
+						"expMonth": 12,
+						"cvv": "111",
+						"amount": amount*100,
 						"expYear": 2018,
 					    "cardEncrypted": encrypted_card,
 					    "last4": "0010",
