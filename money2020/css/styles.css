@@ -1,6 +1,7 @@
 /* Main */
 
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive');
+@import url('https://hervature.com/css?family=Cedarville+Cursive');
 
 html, body {
 	background-color: #ffffff;
@@ -24,7 +25,8 @@ nav {
 .wave {
     position: absolute;
     left: 0;
-    bottom: 0;
+    bottom: -0.5rem;
+    font-size: 2.5rem;
 }
 
 #nav_spacer {
