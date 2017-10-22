@@ -1,0 +1,84 @@
+/* Main */
+
+@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive');
+
+html, body {
+	background-color: #2c3e50;
+	height: 100%;
+}
+
+nav {
+	background-color: #3498db;
+	color: #ecf0f1;
+	text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+}
+
+#accordion {
+	font-size: 0.8rem;
+}
+
+.card-header {
+	color: #3498db;
+}
+
+.card a {
+	text-decoration: none;
+	color:inherit;
+}
+
+.form-control {
+	padding: 0;
+	font-size: 0.8rem;
+}
+
+.input-group-addon {
+	padding: 0 0.5rem;
+}
+
+input { 
+    text-align: center; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+footer {
+	background-color: #3498db;
+	color: #ecf0f1;
+	text-align: center;
+    font-family: 'Cedarville Cursive', cursive;
+    font-size: 2rem;
+}
+
+.modal-footer button {
+	margin: 0 auto;
+}
+
+#signup_modal {
+	top: 20%;
+}
+
+.spinning {
+    animation: spin 1s infinite linear;
+    -webkit-animation: spin2 1s infinite linear;
+    height: 2rem;
+    margin: 0 auto;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
+}

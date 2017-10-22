@@ -1,0 +1,68 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+
+  <title>DBar</title>
+  <meta name="description" content="Blu Wave - Bluetooth Connected Bar ">
+  <meta name="author" content="Blu Wave">
+
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+
+  <script src="js/bootstrap.min.js"></script>
+
+  <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+
+  <script src="js/main.js"></script>
+
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body>
+	<nav class="pt-2">
+		<h1>DBar</h1>
+	</nav>
+
+	<div id="main">
+		<div id="accordion" role="tablist">
+		  
+		</div>
+	</div>
+
+	<div id="signup_modal" class="modal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title">Credit Card Payment</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <div class="form-group row">
+			    <label class="col-12" for="credit_card_number">Card on File for Zach Moore</label>
+			    <i class="fa fa-cc-amex fa-2x col-1"></i></li>
+			    <input type="text" class="form-control col-8 offset-2" id="credit_card_number" placeholder="476173******0010">
+			  </div>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" id="pay_button" class="btn btn-info">Make Payment</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<footer class="pt-3 pb-2 fixed-bottom">
+		Total - $<span id="total"> 0.00 </span>
+	</footer>
+</body>
+
+</html>
