@@ -287,7 +287,7 @@ function draw_order(items) {
 	for (item of items) {
 		if (item.quantity > 1) {
 			$("#main").append(
-				'<li>' + item.name + ' x' + item.quantity '</li>'
+				'<li>' + item.name + ' x' + item.quantity + '</li>'
 			);
 		}
 		else {
