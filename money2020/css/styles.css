@@ -135,18 +135,18 @@ footer {
 }
 
 #processing ul {
-  margin: 0;
+  margin: 0 !important;
 }
 
 #processing ul.dashed {
-  list-style-type: none;
+  list-style-type: none !important;
 }
 
 #processing ul.dashed > li {
-  text-indent: -5px;
+  text-indent: -5px !important;
 }
 
 #processing ul.dashed > li:before {
-  content: "-";
-  text-indent: -5px;
+  content: "-" !important;
+  text-indent: -5px !important;
 }
