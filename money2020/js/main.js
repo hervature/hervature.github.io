@@ -45,7 +45,7 @@ function make_categories() {
 
         	for (i = 0; i < categories.length; i++) {
         		$( "#accordion" ).append(
-        			'<div class="card m-1" id="category-' + categories[i].id + '">\
+        			'<div class="card m-2" id="category-' + categories[i].id + '">\
         				<a data-toggle="collapse" href="#collapse-' + categories[i].id + '">\
 		        			<div class="card-header" role="tab" class="category">\
 		        				<h5 class="mb-0">'
