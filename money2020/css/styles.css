@@ -123,6 +123,8 @@ footer {
 
 .callout {
     color: #aaa;
+    margin-top: 1rem;
+    text-align: center;
 }
 
 .cheers {
