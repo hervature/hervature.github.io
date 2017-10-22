@@ -292,26 +292,24 @@ function draw_order(items) {
 	$("#main").append('<div id="processing"></div>')
 
 	$("#processing").append(
-		'<h3>Processing order</h3>\
-			<ul>'
+		'<h3>Processing order</h3><ul id="order_list"></ul>'
 	);
 
 	for (item of items) {
 		if (item.quantity > 1) {
-			$("#processing").append(
+			$("#order_list").append(
 				'<li>' + item.name + ' x' + item.quantity + '</li>'
 			);
 		}
 		else {
-			$("#processing").append(
+			$("#order_list").append(
 				'<li>' + item.name + '</li>'
 			);
 		}
 	}
 
 	$("#processing").append(
-			'</ul>\
-		<p class="callout">Watch out for a notification to come and grab your drink.</p>'
+			'<p class="callout">Watch out for a notification to come and grab your drink.</p>'
 	);
 
 	$("#processing").append(
