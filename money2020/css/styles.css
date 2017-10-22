@@ -21,6 +21,12 @@ nav {
     box-shadow: 0 8px 7px -8px #999;
 }
 
+.wave {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
 #nav_spacer {
 	height: 64px;
 }
