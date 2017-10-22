@@ -1,6 +1,5 @@
 /* Main */
 
-@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive');
 @import url('https://fonts.googleapis.com/css?family=Lato');
 
 html, body {
@@ -13,7 +12,7 @@ nav {
 	color: #000000;
 	text-align: center;
     font-family: 'Lato', sans-serif;
-    font-weight: light;
+    font-weight: lighter;
     position: fixed;
     top: 0;
     left: 0;
