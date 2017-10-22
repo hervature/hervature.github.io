@@ -3,19 +3,22 @@
 @import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive');
 
 html, body {
-	background-color: #2c3e50;
+	background-color: #ffffff;
 	height: 100%;
 }
 
 nav {
-	background-color: #3498db;
-	color: #ecf0f1;
+	background-color: #ffffff;
+	color: #000000;
 	text-align: center;
     font-family: 'Cedarville Cursive', cursive;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
 
 #nav_spacer {
@@ -44,14 +47,14 @@ nav {
 	padding: 0 0.5rem;
 }
 
-input { 
-    text-align: center; 
+input {
+    text-align: center;
 }
 
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-  -webkit-appearance: none; 
-  margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 input[type="number"] {
