@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	client_id = urlParams.get("client_id");
 	access_token = urlParams.get("access_token");
 
-	make_categories();
+	draw_menu();
 
 	$("footer").click(function() {
 		$('#signup_modal').modal()
@@ -26,6 +26,12 @@ $( document ).ready(function() {
 		$(this).parent().html('<img class="spinning" src="svg/reload.svg">');
 	});
 });
+
+function draw_menu() {
+	$("#main").empty();
+	$("#main").html('<div id="accordion" role="tablist"></div>');
+	make_categories();
+}
 
 function make_categories() {
 
@@ -72,7 +78,7 @@ function make_items(category_id) {
     		for (i = 0; i < items.length; i++) {
     			$( "#category-" + category_id + " .card-body" ).append(
     					'<div id="item-' + items[i].id + '" class="item row mb-1">\
-    						<div class="col-5"><span>' + items[i].name + '</span></div>\
+    						<div class="col-5"><span class="name">' + items[i].name + '</span></div>\
     						<div class="col-3">$' + (items[i].price/100).toFixed(2) + '</div>\
     						<div class="col-4">\
 	    						<div class="input-group">\
@@ -157,7 +163,7 @@ function process_payment() {
 	$(".item").each( function() {
 		var id = $(this).attr("id").substr(5);
 		var quantity = $(this).find("input").val();
-		var name = $(this).first().first().text();
+		var name = $(this).children().find(".name").text();
 		var cost = parseFloat($(this).children().eq(1).text().substr(1))*100;
 		var code = $(this).find(".code").text();
 
@@ -229,13 +235,14 @@ function process_payment() {
 					    "cardEncrypted": encrypted_card,
 					    "last4": "0010",
 					    "first6": "476173"
-					}
+					};
 
 	    			$.ajax({
 				        url: url,
 				        type: 'POST',
 				        data: JSON.stringify(payload),
 				        success: function(data) {
+
 							if (data.result == "APPROVED") {
 
 								url = "https://bluwave.herokuapp.com/api/orders.json";
@@ -245,8 +252,6 @@ function process_payment() {
 								for (item of items) {
 									codes.push(item.code);
 								}
-
-								console.log(codes);
 
 								payload = {
 									"person_id": 1,
@@ -259,6 +264,7 @@ function process_payment() {
 							        data: payload,
 							        success: function(data) {
 										$('#signup_modal').modal('hide');
+										draw_order(items);
 							        }
 							    });
 							}
@@ -268,6 +274,33 @@ function process_payment() {
 		    });
 	    });
 	}
+}
+
+function draw_order(items) {
+	$("#main").empty();
+
+	$("#main").append(
+		'<h3>Your Order is Being Processed</h3>\
+			<ul>'
+	);
+
+	for (item of items) {
+		if (item.quantity > 1) {
+			$("#main").append(
+				'<li>' + item.name + ' x' + item.quantity '</li>'
+			);
+		}
+		else {
+			$("#main").append(
+				'<li>' + item.name + '</li>'
+			);
+		}
+	}
+
+	$("#main").append(
+			'</ul>\
+		<h4>When your order is ready, come to the bar with the app open so the bartender can find you</h4>'
+	);
 }
 
 
