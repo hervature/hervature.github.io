@@ -113,14 +113,14 @@ footer {
     to { -webkit-transform: rotate(360deg); }
 }
 
-.processing {
+#processing {
     padding: 1rem;
 }
 
-.processing h3 {
+#processing h3 {
     text-align: center;
 }
 
 .callout {
-    color: #ccc;
+    color: #aaa;
 }

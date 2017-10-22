@@ -289,27 +289,29 @@ function process_payment() {
 function draw_order(items) {
 	$("#main").empty();
 
-	$("#main").append(
-		'<div class="processing"><h3>Processing order</h3>\
+	$("#main").append('<div id="processing"></div>')
+
+	$("#processing").append(
+		'<h3>Processing order</h3>\
 			<ul>'
 	);
 
 	for (item of items) {
 		if (item.quantity > 1) {
-			$("#main").append(
+			$("#processing").append(
 				'<li>' + item.name + ' x' + item.quantity + '</li>'
 			);
 		}
 		else {
-			$("#main").append(
+			$("#processing").append(
 				'<li>' + item.name + '</li>'
 			);
 		}
 	}
 
-	$("#main").append(
+	$("#processing").append(
 			'</ul>\
-		<p class="callout">Watch out for a notification to come and grab your drink.</p></div>'
+		<p class="callout">Watch out for a notification to come and grab your drink.</p>'
 	);
 }
 
