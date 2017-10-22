@@ -207,10 +207,11 @@ function process_payment() {
 				"orderId": order.id,
 				"taxAmount": 0,
 				"expMonth": 12,
-				"cvv": "111",
+				"cvv": "123",
 				"amount": amount*100,
 				"expYear": 2018,
-				"cardNumber": "4761739001010010",
+				// "cardNumber": "4761739001010010",
+				"cardNumber": "6011361000006668"
 			};
 
 	    	$.ajax({
