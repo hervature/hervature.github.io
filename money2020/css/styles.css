@@ -124,3 +124,10 @@ footer {
 .callout {
     color: #aaa;
 }
+
+.cheers {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 50%;
+}

@@ -313,6 +313,9 @@ function draw_order(items) {
 			'</ul>\
 		<p class="callout">Watch out for a notification to come and grab your drink.</p>'
 	);
+
+	$("#processing").append(
+		'<img src="http://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.5/2/svg/1f37b.svg" class="cheers"></img>');
 }
 
 
