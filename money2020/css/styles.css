@@ -18,6 +18,10 @@ nav {
     right: 0;
 }
 
+#nav_spacer {
+	height: 64px;
+}
+
 #accordion {
 	font-size: 0.8rem;
 }
