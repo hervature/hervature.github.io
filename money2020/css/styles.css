@@ -27,7 +27,7 @@ nav h1 {
 
 .logo {
     position: absolute;
-    left: 0;
+    left: -1rem;
     bottom: 0;
     width: 16%;
 }
