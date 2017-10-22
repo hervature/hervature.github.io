@@ -25,7 +25,7 @@ nav {
 .wave {
     position: absolute;
     left: 0;
-    bottom: -2.7px;
+    bottom: -2.7rem;
     font-size: 4rem;
 }
 
@@ -35,6 +35,10 @@ nav {
 
 #accordion {
 	font-size: 0.8rem;
+}
+
+.card-body {
+    font-size: 1rem;
 }
 
 #main {
