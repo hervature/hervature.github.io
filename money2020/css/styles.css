@@ -131,5 +131,22 @@ footer {
     display: block;
     margin: 0 auto;
     margin-top: 1rem;
-    width: 50%;
+    width: 40%;
+}
+
+#processing ul {
+  margin: 0;
+}
+
+#processing ul.dashed {
+  list-style-type: none;
+}
+
+#processing ul.dashed > li {
+  text-indent: -5px;
+}
+
+#processing ul.dashed > li:before {
+  content: "-";
+  text-indent: -5px;
 }
