@@ -151,7 +151,7 @@ function add_line_items(order_id, items) {
 		$.ajax({
 	        url: url,
 	        type: 'POST',
-	        data: JSON.stringify({ "item": {"id": item.id }}),
+	        data: JSON.stringify({ "item": {"id": item.id, "quantitySold": item.quantity }}),
     		dataType: 'json'
 	    });
 	}
