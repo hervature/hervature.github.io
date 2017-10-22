@@ -25,11 +25,11 @@ nav h1 {
     font-weight: 300;
 }
 
-.wave {
+.logo {
     position: absolute;
     left: 0;
-    bottom: -1rem;
-    font-size: 4rem;
+    bottom: 0;
+    width: 16%;
 }
 
 #nav_spacer {
