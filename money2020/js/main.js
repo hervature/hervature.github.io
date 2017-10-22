@@ -49,7 +49,7 @@ function make_categories() {
         				<a data-toggle="collapse" href="#collapse-' + categories[i].id + '">\
 		        			<div class="card-header" role="tab" class="category">\
 		        				<h5 class="mb-0">'
-							        + get_category_icon(categories[i].name) +
+							        + get_category_icon(categories[i].name) + ' ' + categories[i].name +
 		        				'</h5>\
 		        			</div>\
 		        		</a>\
