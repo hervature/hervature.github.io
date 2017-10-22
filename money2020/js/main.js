@@ -290,7 +290,7 @@ function draw_order(items) {
 	$("#main").empty();
 
 	$("#main").append(
-		'<h3>Your Order is Being Processed</h3>\
+		'<div class="processing"><h3>Processing order</h3>\
 			<ul>'
 	);
 
@@ -309,7 +309,7 @@ function draw_order(items) {
 
 	$("#main").append(
 			'</ul>\
-		<h4>When your order is ready, come to the bar with the app open so the bartender can find you</h4>'
+		<p class="callout">Watch out for a notification to come and grab your drink.</p></div>'
 	);
 }
 

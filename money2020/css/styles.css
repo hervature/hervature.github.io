@@ -112,3 +112,15 @@ footer {
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(360deg); }
 }
+
+.processing {
+    padding: 1rem;
+}
+
+.processing h3 {
+    text-align: center;
+}
+
+.callout {
+    color: #ccc;
+}
