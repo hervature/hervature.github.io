@@ -34,12 +34,17 @@ nav {
 }
 
 .card-header {
-	color: #3498db;
+	color: #000000;
 }
 
 .card a {
 	text-decoration: none;
 	color:inherit;
+}
+
+.card {
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
 }
 
 .form-control {
@@ -67,10 +72,11 @@ input[type="number"] {
 
 footer {
 	background-color: #2ecc71;
-	color: #000000;
+	color: #ffffff;
 	text-align: center;
     font-family: 'Cedarville Cursive', cursive;
     font-size: 2rem;
+    font-weight: bold;
 }
 
 .modal-footer button {
