@@ -292,7 +292,7 @@ function draw_order(items) {
 	$("#main").append('<div id="processing"></div>')
 
 	$("#processing").append(
-		'<h3>Processing order</h3><ul id="order_list"></ul>'
+		'<h3>Processing order</h3><ul id="order_list" class="dashed"></ul>'
 	);
 
 	for (item of items) {
