@@ -16,9 +16,9 @@ nav {
     top: 0;
     left: 0;
     right: 0;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 7px -8px #999;
+    -moz-box-shadow: 0 8px 7px -8px #999;
+    box-shadow: 0 8px 7px -8px #999;
 }
 
 #nav_spacer {
@@ -27,6 +27,10 @@ nav {
 
 #accordion {
 	font-size: 0.8rem;
+}
+
+#main {
+    padding-top: 1rem;
 }
 
 .card-header {
@@ -62,8 +66,8 @@ input[type="number"] {
 }
 
 footer {
-	background-color: #3498db;
-	color: #ecf0f1;
+	background-color: #2ecc71;
+	color: #000000;
 	text-align: center;
     font-family: 'Cedarville Cursive', cursive;
     font-size: 2rem;
