@@ -183,3 +183,7 @@ b {
 .clearfix {
   clear: both;
 }
+
+#courses {
+  margin-bottom: 1rem;
+}
