@@ -45,11 +45,11 @@ function make_categories() {
 
         	for (i = 0; i < categories.length; i++) {
         		$( "#accordion" ).append(
-        			'<div class="card m-1" id="category-' + categories[i].id + '">\
+        			'<div class="card m-2" id="category-' + categories[i].id + '">\
         				<a data-toggle="collapse" href="#collapse-' + categories[i].id + '">\
 		        			<div class="card-header" role="tab" class="category">\
 		        				<h5 class="mb-0">'
-							        + categories[i].name +
+							        + get_category_icon(categories[i].name) + ' ' + categories[i].name +
 		        				'</h5>\
 		        			</div>\
 		        		</a>\
@@ -59,6 +59,16 @@ function make_categories() {
         }
     });
 
+}
+
+function get_category_icon(category) {
+	if (category === "Beers") {
+		return "🍺";
+	} else if (category === "Cocktails") {
+		return "🍸";
+	} else {
+		return "🍷";
+	}
 }
 
 function make_items(category_id) {
@@ -96,7 +106,7 @@ function make_items(category_id) {
 				);
 			}
 
-			$( "#category-" + category_id ).append(      	
+			$( "#category-" + category_id ).append(
 			      	'</div>\
 			     </div>'
 			);
@@ -194,13 +204,14 @@ function process_payment() {
 			url = "https://apisandbox.dev.clover.com/v2/merchant/" + merchant_id + "/pay/key?access_token=" + access_token;
 
 	    	payload = {
-				"orderId": order.id, 
-				"taxAmount": 0, 
-				"expMonth": 12, 
-				"cvv": "111", 
-				"amount": amount*100, 
+				"orderId": order.id,
+				"taxAmount": 0,
+				"expMonth": 12,
+				"cvv": "123",
+				"amount": amount*100,
 				"expYear": 2018,
-				"cardNumber": "4761739001010010", 
+				// "cardNumber": "4761739001010010",
+				"cardNumber": "6011361000006668"
 			};
 
 	    	$.ajax({
@@ -214,7 +225,7 @@ function process_payment() {
 		        }
 		    }).done( function() {
 		    	url = "https://bluwave.herokuapp.com/api/orders/generate_card_encryption?prefix=" + prefix + "&card=" + payload.cardNumber + "&exponent=" + exponent + "&modulus=" + modulus
-		    
+
 		    	$.ajax({
 			        url: url,
 			        type: 'GET',
@@ -227,10 +238,10 @@ function process_payment() {
 	    			payload = {
 					    "orderId": order.id,
 					    "currency": "usd",
-					    "taxAmount": 0, 
-						"expMonth": 12, 
-						"cvv": "111", 
-						"amount": amount*100, 
+					    "taxAmount": 0,
+						"expMonth": 12,
+						"cvv": "111",
+						"amount": amount*100,
 						"expYear": 2018,
 					    "cardEncrypted": encrypted_card,
 					    "last4": "0010",
@@ -279,28 +290,31 @@ function process_payment() {
 function draw_order(items) {
 	$("#main").empty();
 
-	$("#main").append(
-		'<h3>Your Order is Being Processed</h3>\
-			<ul>'
+	$("#main").append('<div id="processing"></div>')
+
+	$("#processing").append(
+		'<h3>Processing order</h3><ul id="order_list" class="dashed"></ul>'
 	);
 
 	for (item of items) {
 		if (item.quantity > 1) {
-			$("#main").append(
+			$("#order_list").append(
 				'<li>' + item.name + ' x' + item.quantity + '</li>'
 			);
 		}
 		else {
-			$("#main").append(
+			$("#order_list").append(
 				'<li>' + item.name + '</li>'
 			);
 		}
 	}
 
-	$("#main").append(
-			'</ul>\
-		<h4>When your order is ready, come to the bar with the app open so the bartender can find you</h4>'
+	$("#processing").append(
+			'<p class="callout">Watch out for a notification to come and grab your drink.</p>'
 	);
+
+	$("#processing").append(
+		'<img src="http://cdnjs.cloudflare.com/ajax/libs/twemoji/2.2.5/2/svg/1f37b.svg" class="cheers"></img>');
 }
 
 

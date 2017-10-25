@@ -1,6 +1,6 @@
 /* Main */
 
-@import url('https://fonts.googleapis.com/css?family=Cedarville+Cursive');
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400');
 
 html, body {
 	background-color: #ffffff;
@@ -11,14 +11,25 @@ nav {
 	background-color: #ffffff;
 	color: #000000;
 	text-align: center;
-    font-family: 'Cedarville Cursive', cursive;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    -webkit-box-shadow: 0 8px 6px -6px #999;
-    -moz-box-shadow: 0 8px 6px -6px #999;
-    box-shadow: 0 8px 6px -6px #999;
+    -webkit-box-shadow: 0 8px 7px -8px #999;
+    -moz-box-shadow: 0 8px 7px -8px #999;
+    box-shadow: 0 8px 7px -8px #999;
+}
+
+nav h1 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+}
+
+.logo {
+    position: absolute;
+    left: -0.5rem;
+    bottom: -0rem;
+    width: 16%;
 }
 
 #nav_spacer {
@@ -29,8 +40,16 @@ nav {
 	font-size: 0.8rem;
 }
 
+.card-body {
+    font-size: 1rem;
+}
+
+#main {
+    padding-top: 1rem;
+}
+
 .card-header {
-	color: #3498db;
+	color: #000000;
 }
 
 .card a {
@@ -62,10 +81,10 @@ input[type="number"] {
 }
 
 footer {
-	background-color: #3498db;
-	color: #ecf0f1;
+	background-color: #2ecc71;
+	color: #ffffff;
 	text-align: center;
-    font-family: 'Cedarville Cursive', cursive;
+    font-family: 'Lato', sans-serif;
     font-size: 2rem;
 }
 
@@ -92,4 +111,42 @@ footer {
 @-webkit-keyframes spin2 {
     from { -webkit-transform: rotate(0deg); }
     to { -webkit-transform: rotate(360deg); }
+}
+
+#processing {
+    padding: 1rem;
+}
+
+#processing h3 {
+    text-align: center;
+}
+
+.callout {
+    color: #aaa;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.cheers {
+    display: block;
+    margin: 0 auto;
+    margin-top: 1rem;
+    width: 40%;
+}
+
+#processing ul {
+  margin: 0 !important;
+}
+
+#processing ul.dashed {
+  list-style-type: none !important;
+}
+
+#processing ul.dashed > li {
+  text-indent: -5px !important;
+}
+
+#processing ul.dashed > li:before {
+  content: "-" !important;
+  text-indent: -5px !important;
 }
