@@ -80,6 +80,7 @@ h1 {
   padding: 0.5em 0;
   font-family: Raleway;
   font-size: 40pt;
+  line-height: 1;
   text-align: center;
   background-color: #d9d9d9;
   border-bottom: 0.5em solid #7F7F7F;
@@ -104,7 +105,15 @@ h2 {
 }
 
 #left-bar > div {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
+}
+
+#left-bar h2 {
+  margin: 0.5em 0 0.4em;
+}
+
+#left-bar p {
+  margin: 0.5em 0;
 }
 
 #left-bar ul {
@@ -144,7 +153,7 @@ h2 {
 
 #right-bar ul.dashed > li {
   text-indent: -15px;
-  margin-bottom: 0.25em;
+  margin-bottom: 0.15em;
 }
 
 #right-bar ul.dashed > li:before {
@@ -167,6 +176,11 @@ b {
 
 .bold {
   font-weight: 700;
+}
+
+.highlight {
+  font-weight: 700;
+  color: #595959;
 }
 
 .left-align {
@@ -195,4 +209,25 @@ b {
 
 #courses {
   margin-bottom: 1rem;
+}
+
+.subrole {
+  margin-top: 0.35em;
+}
+
+.subrole b {
+  font-style: italic;
+}
+
+@page {
+  size: letter;
+  margin: 0;
+}
+
+/* h1 occupies 100pt (40pt line + 40pt padding + 20pt border); the bars must
+   fill exactly the rest of the single printed page. */
+@media print {
+  #left-bar, #right-bar {
+    min-height: calc(100vh - 100pt);
+  }
 }
